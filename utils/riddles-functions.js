@@ -2,17 +2,20 @@ import input from "analiza-sync";
 
 function askRiddle(riddleObj)
 {
+    
+const runing = true
+while (runing);
+{
     console.log(riddleObj.riddleName)
     console.log(riddleObj.taskDescription)
     const userInput = input("type your choice")
     if (userInput == riddleObj.correctAnswer)
-        return true
-    else
-        return false
+        runing = false
+  
 
 
 }
-
+}
 function measureSolveTime(fn)
 {
     startTime = Date.now()
@@ -22,6 +25,7 @@ function measureSolveTime(fn)
     return timeDuration
 }
 
+export default {askRiddle, measureSolveTime}
 
 
 
