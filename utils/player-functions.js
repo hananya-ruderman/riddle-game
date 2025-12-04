@@ -25,4 +25,4 @@ function showStats(player)
     console.log(`your total time playing is: ${totalTime}, the avarage for a riddle is: ${avarageTime}`)
 }
 
-export default {createPlayer, addSolveTime, showStats}
+export {createPlayer, addSolveTime, showStats}

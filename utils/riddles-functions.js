@@ -4,8 +4,8 @@ function askRiddle(riddleObj)
 {
     
 const runing = true
-while (runing);
-{
+while (runing)
+
     console.log(riddleObj.riddleName)
     console.log(riddleObj.taskDescription)
     const userInput = input("type your choice")
@@ -14,7 +14,7 @@ while (runing);
   
 
 
-}
+
 }
 function measureSolveTime(fn)
 {
@@ -25,7 +25,7 @@ function measureSolveTime(fn)
     return timeDuration
 }
 
-export default {askRiddle, measureSolveTime}
+export {askRiddle, measureSolveTime}
 
 
 
