@@ -1,28 +1,28 @@
-import input from "analiza-sync";
 
-function createPlayer()
-{
-    const userName = input("what is your name")
+function createPlayer(userName) {
     const theUser = {
-        userName: userName,
+        userName,
         playTime: []
-    } 
-    console.log(theUser)
+    }
     return theUser
 }
 
-function addSolveTime(player, seconds)
-{
+
+/**
+ * @param {Object} player 
+ * @param {Number} seconds 
+ */
+function addSolveTime(player, seconds) {
+
     player.playTime.push(seconds)
-    console.log(player)
 }
 
-function showStats(player)
-{
-    let totalTime, avarageTime;
-    player.playTime.forEach(element => {totalTime += element});
-    avarageTime = totalTime/player.playTime.length
+function showStats(player) {
+    const totalTime = player.playTime.reduce((acc, element) => acc + element,0);
+    const avarageTime = totalTime / player.playTime.length
     console.log(`your total time playing is: ${totalTime}, the avarage for a riddle is: ${avarageTime}`)
 }
 
-export {createPlayer, addSolveTime, showStats}
+// showStats({ playTime: [1, 2, 3, 4] })
+
+export { createPlayer, addSolveTime, showStats }
